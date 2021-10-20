@@ -1,12 +1,10 @@
-const searchbtn = document.querySelector('.search');
+const container = document.querySelector('.container');
+const searchbtn = document.querySelector('.search-btn');
 const inp = document.querySelector('.inp');
 
-searchbtn.addEventListener("click" , showInput);
+searchbtn.addEventListener('click' , showFunction);
 
-function showInput(){
-    if(inp.style.display === 'none'){
-        inp.style.display = 'flex';
-    }else {
-        inp.style.display = 'none';
-      }
+function showFunction(){
+        container.classList.toggle('active');
+        inp.focus();
 }
